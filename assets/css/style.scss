@@ -1,0 +1,166 @@
+// Css Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Body 
+body {
+    font-family: var(--font-body);
+    background: var(--bg--color-body);
+}
+
+// Variables
+:root {
+    // Colors
+    --color-primary: #2ecc71;
+    --color-light: #3498db; 
+    --color-bold: #191919;
+    --color-white: #fff;	
+    --bg--color-body: #34495e;
+
+    // Fonts
+    --font-body: sans-serif;
+}
+
+// Container
+%container {
+    max-width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+// Flex-center
+%flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Container 
+.container {
+    @extend %container;
+    @extend %flex-c;
+    height: 100vh;
+
+    .form {
+        width: 380px;
+        padding: 40px;
+        background: var(--color-bold);
+        border-radius: 20px;
+        @extend %flex-c;
+        flex-direction: column;
+        text-align: center;
+
+        .logo {
+            color: var(--color-white);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .text , .password {
+            border: none;
+            background: none;
+            outline: none;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            width: 200px;
+            padding: 14px 10px;
+            margin: 10px auto;
+            border: 2px solid var(--color-light);
+            border-radius: 25px; 
+            text-align: center;
+            color: var(--color-white);
+            transition: all .25s linear;
+
+            &:focus {
+                width: 280px;
+                border-color: var(--color-primary);
+            }
+        }
+
+        .btn {
+            border: none;
+            background: none;
+            outline: none;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 14px 40px;
+            margin: 25px auto;
+            border: 2px solid var(--color-primary);
+            text-align: center;
+            color: var(--color-white);
+            border-radius: 25px; 
+            transition: all .25s linear;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--color-primary);
+            }
+
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    // Container
+    %container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    // Container
+    %container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    // Container
+    %container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    // Container
+    %container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    // Container
+    %container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    // Container
+    .container {
+        .form {
+            .text , .password {
+                width: 150px;
+
+                &:focus {
+                    width: 200px;
+                }
+            }
+
+            .btn {
+                padding: 14px 30px;
+            }
+        }
+    }
+}
+
+
+
+
+

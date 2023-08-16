@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg--color-body);
+}
+
+:root {
+  --color-primary: #2ecc71;
+  --color-light: #3498db;
+  --color-bold: #191919;
+  --color-white: #fff;
+  --bg--color-body: #34495e;
+  --font-body: sans-serif;
+}
+
+.container {
+  max-width: 1320px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container .form, .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+}
+.container .form {
+  width: 380px;
+  padding: 40px;
+  background: var(--color-bold);
+  border-radius: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+.container .form .logo {
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.container .form .text, .container .form .password {
+  border: none;
+  background: none;
+  outline: none;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  width: 200px;
+  padding: 14px 10px;
+  margin: 10px auto;
+  border: 2px solid var(--color-light);
+  border-radius: 25px;
+  text-align: center;
+  color: var(--color-white);
+  transition: all 0.25s linear;
+}
+.container .form .text:focus, .container .form .password:focus {
+  width: 280px;
+  border-color: var(--color-primary);
+}
+.container .form .btn {
+  border: none;
+  background: none;
+  outline: none;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 40px;
+  margin: 25px auto;
+  border: 2px solid var(--color-primary);
+  text-align: center;
+  color: var(--color-white);
+  border-radius: 25px;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+.container .form .btn:hover {
+  background: var(--color-primary);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .container .form .text, .container .form .password {
+    width: 150px;
+  }
+  .container .form .text:focus, .container .form .password:focus {
+    width: 200px;
+  }
+  .container .form .btn {
+    padding: 14px 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
